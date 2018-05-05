@@ -1,0 +1,116 @@
+.header{
+    background: pink;
+    background:url(http://ow3ssotds.bkt.clouddn.com/index_bg.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 24px;
+}
+.slogn{
+    width: 80%;
+    margin: 0 auto;
+    padding: 160px 0 220px 0;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 4px;
+}
+.slogn .muletter{
+    letter-spacing: 5px;
+    transition: all 800ms;
+    display: inline-block;
+}
+.slogn .space{
+    margin-right: 6px;
+}
+.muletter.current {
+    -webkit-transform: rotateX(50deg);
+    color: yellow;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .2);
+}
+.logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 16px;
+}
+.logoimg{
+    width: 70px;
+}
+.maincontent{
+    width: 1170px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 16px;
+}
+.left{
+    width: 72%;
+    float: left;
+}
+.right{
+    width: 26%;
+    float: right;
+}
+@media screen and (max-width: 1170px) {
+    .slogn{
+        padding: 120px 0 180px 0;
+    }
+    .logoimg{
+        width: 70px;
+    }
+    .header{
+        margin-bottom: 20px;
+    }
+    .maincontent{
+        width: 100%;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slogn{
+        padding: 76px 0;
+        font-size: 10px;
+    }
+    .logoimg{
+        width: 90px;
+    }
+    .header{
+        margin-bottom: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .slogn{
+        padding: 40px 0;
+        font-size: 12px;
+    }
+    .logo{
+        padding: 10px;
+    }
+    .logoimg{
+        width: 60px;
+    }
+    .header{
+        margin-bottom: 10px;
+    }
+}
+
+/* nav */
+.nav{
+    position: absolute;
+    bottom: 16px;
+    right: 24px
+}
+.nav-item{
+    padding: 10px;
+    color: #fff;
+    font-weight: 700;
+}
+.nav-item:hover{
+    color: rgba(255,255,255,.8);
+}

@@ -1,83 +1,34 @@
-.header{
-    background: pink;
-    background:url(http://ow3ssotds.bkt.clouddn.com/index_bg.jpg) no-repeat center center;
-    background-size: cover;
-    position: relative;
+.art-item{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
 }
-.slogn{
-    width: 80%;
-    margin: 0 auto;
-    padding: 160px 0 220px 0;
-    font-size: 13px;
-    text-align: center;
-    color: #fff;
-    letter-spacing: 4px;
+.art-title{
+    font-size: 26px;
+    line-height: 50px;
+    margin: 16px 0 10px 0;
 }
-.slogn .muletter{
-    letter-spacing: 5px;
-    transition: all 800ms;
-    display: inline-block;
+.art-title:hover,.art-desc:hover{
+    color: #1890ff;
 }
-.slogn .space{
-    margin-right: 6px;
+.art-desc{
+    font-size: 14px;
+    color: #a3a3a3;
+    font-style: italic;
 }
-.muletter.current {
-    -webkit-transform: rotateX(50deg);
-    color: yellow;
-    text-shadow: 0 0 10px rgba(255, 255, 255, .2);
+.pubdate{
+    font-size: 14px;
+    color: #ccc;
+    line-height: 26px;
+    font-style: italic;
 }
-.logo{
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 16px;
-}
-.logoimg{
-    width: 70px;
-}
-@media screen and (max-width: 1000px) {
-    .slogn{
-        padding: 120px 0 180px 0;
-    }
-    .logoimg{
-        width: 70px;
-    }
+@media screen and (max-width: 1170px) {
+
 }
 
 @media screen and (max-width: 768px) {
-    .slogn{
-        padding: 76px 0;
-        font-size: 10px;
-    }
-    .logoimg{
-        width: 90px;
-    }
+
 }
 
 @media screen and (max-width: 400px) {
-    .slogn{
-        padding: 40px 0;
-        font-size: 12px;
-    }
-    .logo{
-        padding: 10px;
-    }
-    .logoimg{
-        width: 60px;
-    }
-}
-
-/* nav */
-.nav{
-    position: absolute;
-    bottom: 16px;
-    right: 24px
-}
-.nav-item{
-    padding: 10px;
-    color: #fff;
-    font-weight: 700;
-}
-.nav-item:hover{
-    color: rgba(255,255,255,.8);
+    
 }

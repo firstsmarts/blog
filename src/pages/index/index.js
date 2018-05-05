@@ -1,51 +1,35 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './index.css'
+
 
 export default class Index extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            word: 'I MEET YOU , TREASURE YOU , LOVE YOU , EVEN , I MISS YOU ...',
-            current: 0,
-            timer: null
         }
     }
-
-    componentDidMount(){
-        const len = this.state.word.length
-        this.setState({
-            timer: setInterval(() => {
-                if (this.state.current == len) {
-                    this.setState({
-                        current: 0
-                    })
-                    return
-                }
-                this.setState({
-                    current: this.state.current + 1
-                })
-            },800)
-        })
-    }
     render() {
-        const list = this.state.word.split('')
         return (
-            <div className="content">
-                <div className="header">
-                    <div className="logo">
-                        <img className="logoimg" src={require('../../asset/images/logo.png')} alt=""/>
+            <div>
+                <div className="left">
+                    <div className="articles">
+                        <div className="art-item">
+                            <Link to="/">
+                                <h3 className="art-title">
+                                    饿了么PWA升级实践
+                                </h3>
+                                <p className="art-desc">今年 9 月份的时候，《程序员》杂志社就邀请我写一篇关于 PWA 的文章。后来花式拖稿，拖过了 10 月的 QCon，11 月的 GDG DevFest，终于在 12 月把这篇长文熬了出来。几次分享的不成熟，这次的结构算是比较满意了。「 可能是目前中文世界里对 PWA 最全面详细的长文了」，希望你能喜欢。
+                              本文首发于 CSDN 与《程序员》2017 年 2 月刊，同步发布于 Hux B...</p>
+                            </Link>
+                            <p className="pubdate">
+                                published by ck on june 24,2017
+                            </p>
+                        </div>
                     </div>
-                    <p className="slogn">
-                        {
-                            list.map((item,i) => <span key={i} className={`muletter ${item == ' ' ? 'space' : ''} ${this.state.current == i ? 'current' : ''}`}>{item == ' ' ? '' : item}</span>)
-                        }
-                    </p>
-                    <div className="nav">
-                        <Link className="nav-item" to="/">Home</Link>
-                        <Link className="nav-item" to="/about">About</Link>
-                        <Link className="nav-item" to="/profiles">profiles</Link>
-                    </div>
+                </div>
+                <div className="right">
+                    world
                 </div>
             </div>
         )

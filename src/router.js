@@ -1,23 +1,23 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {browserHistory} from 'react-router'
+import BaseLayout from '@components/layout'
+import Index from 'bundle-loader?lazy&name=i!@/index'
+import About from 'bundle-loader?lazy&name=at!@/about'
+import { createComponent } from './utils/utils';
 
-import BaseLayout from 'bundle-loader?lazy&name=index!@/index'
-import { createComponent } from './utils/utils'
-// const createComponent = (Com) => (props) => (
-//     <Bundle load={Com}>
-//         {(Com) => Com
-//             ? <Com {...props} />
-//             : ''
-// }
-//     </Bundle>
-// )
+const routersConfig = {
+    '/': createComponent(Index),
+    '/about': createComponent(About)
+}
+
+
 
 const getRouter = () => {
     return (
         <Router history={browserHistory}>
             <div>
-                <Route path="/" component={createComponent(BaseLayout)}/>
+                <Route path="/"  render={() => <BaseLayout routersConfig={routersConfig} />}/>
             </div>
         </Router>
     )
