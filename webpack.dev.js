@@ -27,7 +27,7 @@ const devConfig = {
         // progress: true,   cli only 需要在命令行配置
         proxy:{
             '/api/':{
-                target: 'http://wandou.incubate.os',
+                target: 'http://localhost:8080',
                 changeOrigin: true
             }
         }
