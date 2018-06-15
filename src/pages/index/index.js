@@ -9,9 +9,8 @@ export default class Index extends Component {
         this.state = {
             list: []
         }
-
-
     }
+    
     componentWillMount(){
         fetch('/api/getlist').then(res => res.json()).then(res => {
             this.setState({
@@ -42,7 +41,7 @@ export default class Index extends Component {
                     </div>
                 </div>
                 <div className="right">
-                    world
+                    
                 </div>
             </div>
         )
