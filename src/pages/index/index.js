@@ -13,6 +13,13 @@ export default class Index extends Component {
 
     }
     componentWillMount(){
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://firstsmarts.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        
         fetch('/api/getlist').then(res => res.json()).then(res => {
             this.setState({
                 list: res.data
@@ -42,7 +49,7 @@ export default class Index extends Component {
                     </div>
                 </div>
                 <div className="right">
-                    world
+                    <div id="disqus_thread"></div>
                 </div>
             </div>
         )
