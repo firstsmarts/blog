@@ -9,9 +9,8 @@ export default class Index extends Component {
         this.state = {
             list: []
         }
-
-
     }
+    
     componentWillMount(){
         (function () { // DON'T EDIT BELOW THIS LINE
             var d = document, s = d.createElement('script');
